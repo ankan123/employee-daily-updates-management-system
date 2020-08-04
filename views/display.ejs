@@ -1,0 +1,46 @@
+<div>
+    <a href="/" style="position:absolute;left:2%;top:2%;text-decoration:none;"><i class="fas fa-home fa-2x"></i>Home</a>
+    <a href="/admin" style="position:absolute;left:2%;top:9%;text-decoration:none;"><i class="fas fa-user-shield fa-2x"></i>Admin page</a>
+  
+  <div class="row mt-9">
+  <div class="col-md-10 m-auto">
+    <div class="card card-body">
+          <h3>Input Details</h3>
+          <form method="POST" action="/admin/empdisplay">
+            Enter Date:<input type="date" name="date" required>
+            <button type="submit">Display</button> 
+          </form>
+        </br>
+<table class="table table-striped">
+    <thread>
+        <tr>
+            <th>Employee-ID</th>
+            <th>Order No.</th>
+            <th>Product</th>
+            <th>Window</th>
+            <th>Activity</th>
+            <th>Window per Net</th>
+            <th>Time taken(Hours)</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thread>
+    <tbody>
+        <% for(var obj of collection)  { %>
+        <tr>
+            <td><%= obj.empId %></td>
+            <td><%= obj.orderNo %></td>
+            <td><%= obj.Product %></td>
+            <td><%= obj.Window %></td>
+            <td><%= obj.Activity %></td>
+            <td><%= obj.windowPerNet %></td>
+            <td><%= obj.time %></td>
+            <td><a href="/<%= obj._id %>"><i class="fas fa-edit"></i></a></td>
+            <td><a href="/admin/<%= obj._id %>"><i class="fas fa-trash"></i></a></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+    </div></div></div></div>

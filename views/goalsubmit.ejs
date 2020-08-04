@@ -1,0 +1,26 @@
+<style>
+ 
+.goalSubmit label{
+    display: inline-block;
+  width: 140px;
+  text-align: right;
+  margin-right:20px;
+}
+</style>
+<div>
+    <a href="/admin" style="position:absolute;left:10%;top:10%;text-decoration:none;"><i class="fas fa-user-shield fa-2x"></i>Admin page</a>
+  
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+         <div class='goalSubmit' style="text-align: center"> <h3><b>Goal Details</b> </h3>
+      <label>Product =</label><%= submit.product %></br>
+     <label>Activity =</label><%= submit.activity %></br>
+     <label>Standard Days =</label><%= submit.standardDays %></br>
+    <label>Standard Rate=</label><%= submit.standardRate %></br>
+    </div> 
+      </div>
+      
+    </div>
+  </div>
+</div>

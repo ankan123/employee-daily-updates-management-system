@@ -1,0 +1,37 @@
+<div style="top: 10%;">
+    <a href="/" style="position:absolute;left:10%;top:10%;text-decoration:none;"><i class="fas fa-home fa-2x"></i>Home</a>
+    <a href="/admin" style="position:absolute;left:10%;top:19%;text-decoration:none;"><i class="fas fa-user-shield fa-2x"></i>Admin page</a>
+  
+  <div class="row mt-6">
+  <div class="col-md-8 m-auto">
+    <div class="card card-body">
+               <h3>Goal Details</h3>
+<table class="table table-striped">
+    <thread>
+        <tr>
+          
+            <th>Product</th>
+            <th>Activity</th>
+            <th>Standard Days</th>
+            <th>Standard Rate</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thread>
+    <tbody>
+        <% for(var obj of collection)  { %>
+        <tr>
+          
+            <td><%= obj.product %></td>
+            <td><%= obj.activity %></td>
+            <td><%= obj.standardDays %></td>
+            <td><%= obj.standardRate %></td>
+            <td><a href="/admin/goalEdit/<%= obj._id %>"><i class="fas fa-edit"></i></a></td>
+            <td><a href="/admin/goal/<%= obj._id %>"><i class="fas fa-trash"></i></a></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+    </div></div></div></div>

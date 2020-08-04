@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+           
+            h2{
+                text-align: center;
+            }
+           .form-group label{
+            display: inline-block;
+  width: 140px;
+  text-align: right;
+  margin-right:20px;
+           }
+            
+            </style> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/journal/bootstrap.min.css"
+    />
+</head>
+<body>
+   <div>
+      <a href="/admin" style="position:absolute;left:10%;top:10%;text-decoration:none;"><i class="fas fa-user-shield fa-2x"></i>Admin page</a>
+   
+    <div class="row mt-5">
+            <div class="col-md-6 m-auto">
+              <div class="card card-body">
+                    <h2>Edit Goal</h2>
+    
+                    <form action='/goalsEdit' method="POST" id="goalset">
+      <div class="form-group">
+         <div style="display: none;"> <input type="text"  value="<%= query %>"  name="id" readonly></div>
+    <label for="product"><b>Product: </b></label><select name="product">
+      <option value="velcro">Velcro</option>
+      <option value="Roller">Roller</option>
+      <option value="Fisse">Fisse</option>
+      <option value="PVC strip">PVC strip</option>
+      <option value="others">others</option>
+    </select></br></br>
+    <label for="activity"><b>Activity:</b> </label><select name="activity">
+      <option value="cuttingStitching">Cutting & Stitching</option>
+      <option value="installation/repair">Installation / Repair</option>
+      <option value="panel cutting">Panel Cutting</option>
+      <option value="stitching">stitching</option>
+      <option value="cut and stitch">cutting and stitching</option>
+      <option value="blinds refitting">Blinds Refitting</option>
+      <option value="cleaning">cleaning</option>
+      <option value="repair">repair</option>
+    </select></br></br>
+    <label for="standardDays"><b>Standard Days:</b> </label><input type="number" name="standardDays" required></br></br>
+    <label for="standardRate"><b>Standard rate:</b></label><input type="number" name="standardRate" required></br></br>  
+    <button type="submit" class="btn btn-primary btn-block">Update Goal</button>  
+  </div>
+</form>
+    </div></div></div></div>
+</body>
+</html>    

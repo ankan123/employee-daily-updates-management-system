@@ -1,0 +1,62 @@
+
+<style>
+#workerinput label{
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  margin-right:20px;
+}
+#wid:hover{
+  cursor:not-allowed;
+}
+</style>
+<div><a href="/users/logout" style="position:absolute;left:10%;top:10%;text-decoration:none;"><i class="fas fa-home fa-2x"></i>Home</a>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h3><p  style="font-weight: bold" class="lead mb-3">Welcome <%= user.name %></p></b></h3><b>
+    <div id="formworker">
+    <form action="/contact" method="POST" id="workerinput">
+    <label>Employee-ID: </label><input type="number" name="empId" value="<%= user.workerid %>" id="wid" readonly></br> 
+        <label>Order Number: </label><input type="number" name="orderNo" id="data" required></br>
+        <label>Product:</label><select name="Product">
+                <option value="velcro">Velcro</option>
+                <option value="Roller">Roller</option>
+                <option value="Fisse">Fisse</option>
+                <option value="PVC strip">PVC strip</option>
+                <option value="others">others</option>
+              </select></br>
+        <label>Window:</label><select name="Window">
+                    <option value="other than pocket net">other than pocket net</option>
+                    <option value="pocket windowPerNet">pocket net</option>
+                    <option value="other than grill">other than grill</option>
+                    <option value="grill">grill</option>
+                    <option value="granite marble">granite/marble</option>
+                    <option value="wood">wood</option>
+                    <option value="cement">cement</option>
+                    <option value="wall with drill">wall with drill</option>
+                    <option value="beam">beam(weilding+hanging)</option>
+                    <option value="box making">box making</option>
+                    <option value="packing">packing</option>
+                    <option value="others">others</option>
+                  </select></br>
+         <label>Activity:</label><select name="Activity">
+                        <option value="cuttingStitching">Cutting & Stitching</option>
+                        <option value="installation/repair">Installation / Repair</option>
+                        <option value="panel cutting">Panel Cutting</option>
+                        <option value="stitching">stitching</option>
+                        <option value="cut and stitch">cutting and stitching</option>
+                        <option value="blinds refitting">Blinds Refitting</option>
+                        <option value="cleaning">cleaning</option>
+                        <option value="repair">repair</option>
+                      </select></br>                       
+         <label>Date:</label><input type="date" name="date" id="datepicker"required></br>
+        <label>Number of Windows/Net:</label><input type="number" name="windowPerNet" required></br>
+       <label>Time Taken (Hours):</label> <input type="number" name="time" required></br>
+        <button type="submit" class="btn btn-primary btn-block">Send</button></br>
+      </form>
+    </div> 
+    </div></div></div>
+    <!-- <h4><a href="/"> home page</a></h4> -->
+</div>
+
